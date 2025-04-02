@@ -1,0 +1,36 @@
+export default {
+  routes: [
+    {
+      method: "GET",
+      path: "/reminders/me",
+      handler: "reminder.userReminders",
+      config: {
+        auth: {
+          // Cambiamos 'true' por un objeto de configuración
+          // required: true, // Esto asegura que el endpoint esté protegido
+        },
+      },
+    },
+    {
+      method: "GET",
+      path: "/reminders/me/:id",
+      handler: "reminder.userReminder",
+      config: {
+        auth: {
+          // Cambiamos 'true' por un objeto de configuración
+          // required: true, // Esto asegura que el endpoint esté protegido
+        },
+      },
+    },
+    {
+      method: "POST",
+      path: "/reminders/me",
+      handler: "reminder.create", // Esto es la ruta para crear un nuevo Reminder
+      config: {
+        auth: {
+          // required: true, // Solo usuarios autenticados pueden crear un Reminder
+        },
+      },
+    },
+  ],
+};

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reminders",
+  "info": {
+    "singularName": "reminder",
+    "pluralName": "reminders",
+    "displayName": "Reminder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reminders"
+    },
+    "reminder_schedules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reminder-schedule.reminder-schedule",
+      "mappedBy": "reminder"
+    },
+    "reminder_image": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reminder-image.reminder-image"
+    },
+    "intervention_session": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::intervention-session.intervention-session"
+    }
+  }
+}

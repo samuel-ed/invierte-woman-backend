@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reminder_schedules",
+  "info": {
+    "singularName": "reminder-schedule",
+    "pluralName": "reminder-schedules",
+    "displayName": "ReminderSchedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "time": {
+      "type": "time"
+    },
+    "reminder": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reminder.reminder",
+      "inversedBy": "reminder_schedules"
+    },
+    "week_days": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::week-day.week-day"
+    },
+    "tip": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tip.tip",
+      "inversedBy": "reminder_schedules"
+    }
+  }
+}

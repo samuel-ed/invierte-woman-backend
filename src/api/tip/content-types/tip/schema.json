@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tips",
+  "info": {
+    "singularName": "tip",
+    "pluralName": "tips",
+    "displayName": "Tip",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "reminder_image": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reminder-image.reminder-image"
+    },
+    "reminder_schedules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::reminder-schedule.reminder-schedule",
+      "mappedBy": "tip"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "tip_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tip-category.tip-category"
+    }
+  }
+}

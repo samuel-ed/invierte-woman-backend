@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reminder_images",
+  "info": {
+    "singularName": "reminder-image",
+    "pluralName": "reminder-images",
+    "displayName": "ReminderImage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "media_src": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "yellow",
+        "blue",
+        "red",
+        "purple"
+      ]
+    }
+  }
+}

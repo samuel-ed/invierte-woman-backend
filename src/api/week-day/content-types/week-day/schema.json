@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "week_days",
+  "info": {
+    "singularName": "week-day",
+    "pluralName": "week-days",
+    "displayName": "WeekDay",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "maxLength": 2,
+      "unique": true
+    }
+  }
+}

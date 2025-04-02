@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tip_categories",
+  "info": {
+    "singularName": "tip-category",
+    "pluralName": "tip-categories",
+    "displayName": "TipCategory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

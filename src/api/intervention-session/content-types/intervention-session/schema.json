@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "intervention_sessions",
+  "info": {
+    "singularName": "intervention-session",
+    "pluralName": "intervention-sessions",
+    "displayName": "InterventionSession"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "session_date": {
+      "type": "date"
+    },
+    "session_activity": {
+      "type": "text"
+    },
+    "session_favorite_moment": {
+      "type": "text"
+    },
+    "session_promise": {
+      "type": "text"
+    },
+    "next_session_task": {
+      "type": "text"
+    },
+    "reminder_image": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::reminder-image.reminder-image"
+    }
+  }
+}
